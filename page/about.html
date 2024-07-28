@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>about</title>
+        <link rel="stylesheet" href="./../style/page/about.css" />
+        <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css" />
+        <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+        <!-- JS -->
+        <script src="./../js/js.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    </head>
+
+    <body>
+        <div id="wrap">
+            <header id="header">
+                <div class="HeaderTop">
+                    <div class="header-content">
+                        <h1 class="logo">
+                            <img
+                                src="https://amusemakeup.cafe24.com/web/upload/NNEditor/20201006/487150516b531dc46b1c07bab3ed80b8.png"
+                                alt="어뮤즈로고"
+                            />
+                        </h1>
+                        <nav>
+                            <div class="NavWrap">
+                                <div class="gnb">
+                                    <ul>
+                                        <li class="GnbList Menubtn" id="MenuBox">
+                                            <i class="xi-bars"></i>
+                                            <a href="#" class="GnbItm">menu</a>
+                                        </li>
+                                        <li class="GnbList" id="profile">
+                                            <i class="xi-user-o"></i><a href="#" class="GnbItm">프로필</a>
+                                        </li>
+                                        <li class="GnbList" id="cart">
+                                            <i class="xi-cart-o"></i><a href="#" class="GnbItm">장바구니</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </nav>
+                    </div>
+                </div>
+                <div class="MenuWrap">
+                    <div class="MenuLayout">
+                        <span class="CloseBtn">×</span>
+                        <div class="scroll">
+                            <ul>
+                                <li class="MenuList" id="MenuInfo">
+                                    <div class="MenuMy">
+                                        <div class="LogBox">
+                                            <span class="UserLine"><a href="#">LOGIN</a></span>
+                                            <span class="UserLine JOIN"><a href="#">JOIN</a></span>
+                                            <span class="UserLine MYPAGE"><a href="#">MYPAGE</a></span>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="MenuList">
+                                    <a href="#"><span>SHOPALL</span></a>
+                                    <div class="ShopList">
+                                        <ul>
+                                            <li><a href="#">BEST</a></li>
+                                            <li><a href="#">ONLYAMUSE</a></li>
+                                            <li><a href="#">FACE</a></li>
+                                            <li><a href="#">SUNCARE</a></li>
+                                            <li><a href="#">LIP</a></li>
+                                            <li><a href="#">EYES</a></li>
+                                            <li><a href="#">WELLNESS</a></li>
+                                            <li><a href="#">AgoodMUSE</a></li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li class="MenuList">
+                                    <a href="#"><span class="sub">ABOUT</span></a>
+                                    <div class="ShopList hide">
+                                        <ul>
+                                            <li><a href="#">ABOUT US</a></li>
+                                            <li><a href="#">ABOUT GIRL</a></li>
+                                            <li><a href="#">MEMBERSHIP</a></li>
+                                            <li><a href="#">LOOKBOOK</a></li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li class="MenuList"><a href="#">WELLNESS</a></li>
+                                <li class="MenuList"><a href="#">SHOWROOM</a></li>
+                                <li class="MenuList">
+                                    <a href="#"><span class="sub">STOCKIST</span></a>
+                                    <div class="ShopList hide">
+                                        <ul>
+                                            <li><a href="#">OFFLINE STORE</a></li>
+                                            <li><a href="#">ONLINE STORE</a></li>
+                                            <li><a href="#">GLOBAL STORE</a></li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li class="MenuList">
+                                    <a href="#"><span class="sub">COMMUNITY</span></a>
+                                    <div class="ShopList hide">
+                                        <ul>
+                                            <li><a href="#">EVENT</a></li>
+                                            <li><a href="#">REVIEW</a></li>
+                                            <li><a href="#">NOTICE</a></li>
+                                            <li><a href="#">FAQ</a></li>
+                                        </ul>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <div class="about">
+                <div class="box box1">
+                    <div class="BannerBox">
+                        <img src="./../img/about/banner1.jpg" alt="" />
+                    </div>
+                    <div class="Tit" data-aos="fade-left" data-aos-easing="linear" data-aos-duration="500">
+                        <p>I AM <em>YOUR </em><span>LIFESAVER</span></p>
+                        <br />
+                        <!-- <p>AMUSE</p> -->
+                    </div>
+                </div>
+                <div class="box box2" data-aos="zoom-in" data-aos-easing="linear" data-aos-duration="1000">
+                    <div class="inner">
+                        <div class="ImgBox">
+                            <img src="./../img/about/about.jpg" alt="" />
+                        </div>
+
+                        <div class="des1">
+                            <h2>기분 좋은 <span>비건& 웰니스 뷰티의 시작</span></h2>
+                            <p>
+                                <em> AMUSE</em> 는 지속 가능한 가치 소비를 위한 비건 & 웰니스를
+                                <br />
+                                <em> AMUSE</em> 만의 컬러로 일상에 기분 좋은 바이브를 전달하는
+                                <br />
+                                <span>서울 베이스의 라이프스타일 비건 & 웰니스 뷰티</span>
+                                브랜드입니다.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="box box3" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1000">
+                    <div class="inner">
+                        <div class="LeftBox">
+                            <img src="./../img/about/about2.jpg" alt="" />
+                        </div>
+                        <div class="RightBox">
+                            <div class="img1">
+                                <img src="./../img/about/about3.jpg" alt="" />
+                            </div>
+                            <div class="des1">
+                                <h2>Healthier Skin & Vegan Makeup</h2>
+                                <p>
+                                    <em>AMUSE </em>는 기분 좋은 바이브를 완성하는 동시에, <br />우리의 '일상' 속에서
+                                    <span>환경과 지속 가능성</span>을 위한<br />
+                                    <span> "| AM YOUR LIFESAVER -</span> 행복하게 태어난 제품만이 우리의 삶을 즐겁게
+                                    만들 수 있다"는 믿음을 존중하며<br />
+                                    <em>AMUSE</em> 의 비건 & 웰니스 뷰티 큐레이션을 선보입니다.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="box box4">
+                    <div
+                        class="inner"
+                        data-aos="fade-up"
+                        data-aos-easing="linear"
+                        data-aos-duration=" 1600"
+                        data-aos-offset="500"
+                    >
+                        <h2>AMUSE</h2>
+                        <p>
+                            AMUSE 는 일상에 자연스럽게 녹아들어<em> 새롭게 발견하게 될 새로운 </em>
+                            <span> '나'를 찾아가는 그 기분 좋은 여정을 함께 합니다. </span>
+                        </p>
+                    </div>
+                    <div class="ani">
+                        <ul>
+                            <li class="list1">
+                                <div class="inner">
+                                    <div
+                                        class="TxtWrap"
+                                        data-aos="fade-up"
+                                        data-aos-easing="linear"
+                                        data-aos-duration="1200"
+                                    >
+                                        <div class="txt">
+                                            <h2>Seoul Based Lifestyle</h2>
+                                        </div>
+                                        <div class="des2">
+                                            <p>본연의 자연스러움이 담겨진 서울 베이스의 라이프스타일 DNA</p>
+                                            <p>
+                                                <em>SEOULER'S LIFESTYLE BEAUTY</em> 우리가 매일 살아가는 공간인 서울,
+                                                그리고 자기 스스로의 아이코닉한 라이프 스타일과 컬처를 만들어가는,
+                                                서울러에게 영감을 받은 모티브로, 나만의 취향이 담긴 바이브를 찾아보는 일
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="ImgWrap"
+                                        data-aos="fade-up"
+                                        data-aos-easing="linear"
+                                        data-aos-duration="1000"
+                                        data-aos-offset="500"
+                                        data-aos-delay="200"
+                                    >
+                                        <img src="./../img/about/des4.jpg" alt="" />
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="list2">
+                                <div class="inner">
+                                    <div
+                                        class="TxtWrap"
+                                        data-aos="fade-up"
+                                        data-aos-easing="linear"
+                                        data-aos-duration="1200"
+                                    >
+                                        <div class="txt">
+                                            <h2>Clean & Vegan Beauty</h2>
+                                        </div>
+                                        <div class="des2">
+                                            <p>환경과 지속 가능성을 생각하는 뷰티 루틴 완성, 클린& 비건 뷰티 DNA</p>
+                                            <p>
+                                                어뮤즈 웰니스는 <em>매일의 일상은 건강하고, 동시에 즐거워야 한다</em> 는
+                                                <br />
+                                                믿음과 자연에서 얻은 건강한 원료로 고기능&고효능을 실현하고, <br />
+                                                감각을 즐겁게 깨우는 동시에, 건강하고 균형 잡힌 웰니스 라이프스타일
+                                                뷰티를 제안합니다
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="ImgWrap"
+                                        data-aos="fade-up"
+                                        data-aos-easing="linear"
+                                        data-aos-duration="1000"
+                                        data-aos-offset="300"
+                                        data-aos-delay="200"
+                                    >
+                                        <img src="./../img/about/des1.jpg" alt="" />
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="list3">
+                                <div class="inner">
+                                    <div
+                                        class="TxtWrap"
+                                        data-aos="fade-up"
+                                        data-aos-easing="linear"
+                                        data-aos-duration="1200"
+                                    >
+                                        <div class="txt">
+                                            <h2>AMUSE's Color Code</h2>
+                                        </div>
+                                        <div class="des2">
+                                            <p>고유한 정체성과 스토리를 담아낸 AMUSE 컬러 DNA</p>
+                                            <p>
+                                                AMUSE 는 점차적으로 그 가치와 영역을 우리의 일상으로 확대하여
+                                                <br />본질에 집중한 AMUSE 만의 기분 좋은 애티튜드를 담은 <br />
+                                                <em>새로운 비건 &웰니스 뷰티 라이프</em>를 완성하고자 합니다.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="ImgWrap"
+                                        data-aos="fade-up"
+                                        data-aos-easing="linear"
+                                        data-aos-duration="1000"
+                                        data-aos-offset="500"
+                                        data-aos-delay="200"
+                                    >
+                                        <img src="./../img/about/des3.jpg" alt="" />
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="list4">
+                                <div class="inner">
+                                    <div
+                                        class="TxtWrap"
+                                        data-aos="fade-up"
+                                        data-aos-easing="linear"
+                                        data-aos-duration="1200"
+                                    >
+                                        <div class="txt">
+                                            <h2>New Digital</h2>
+                                        </div>
+                                        <div class="des2">
+                                            <p>
+                                                디지털을 통한 인게이지먼트를 강화하고 <br />패션, 아트, 라이프스타일에
+                                                맞는 차별화된 뉴 룩 DNA
+                                            </p>
+                                            <p><em>AMARA & AZ</em></p>
+                                            <p>
+                                                AMARA는 AMUSE의 세계관을 이야기하는 K-VIRTUAL AMUSE GIRLE, <br />복숭아
+                                                행성에서 태어나 세상과 소통하는소녀와
+                                            </p>
+
+                                            <p>
+                                                AMUSE의 파란 고양이 친구, AZ:아즈를 소개합니다. AMUSE & AZ의 친구가
+                                                되어보세요
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="ImgWrap"
+                                        data-aos="fade-up"
+                                        data-aos-easing="linear"
+                                        data-aos-duration="1000"
+                                        data-aos-offset="500"
+                                        data-aos-delay="200"
+                                    >
+                                        <img src="./../img/about/des2.jpg" alt="" />
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="box box5">
+                        <div class="inner" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1000">
+                            <div class="IntImg"><img src="./../img/about/seouler.jpg" alt="" /></div>
+                            <div class="des3">
+                                <h2>INSPIRED BY SEOULER</h2>
+                                <p>
+                                    <em> AMUSE</em> 는 일상에 자연스럽게 녹아들어<em> 새롭게 발견하게 될 새로운 </em>
+                                    <span> '나'를 찾아가는 그 기분 좋은 여정을 함께 합니다. </span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <footer>
+                    <div class="FooterInner">
+                        <div class="FooterWrap">
+                            <table border="0" summary="" cellspacing="0" cellpadding="0">
+                                <colgroup>
+                                    <col style="width: auto" />
+                                    <col style="width: 32%" />
+                                    <col style="width: 32%" />
+                                </colgroup>
+                                <tbody>
+                                    <tr>
+                                        <td scope="col" class="a">
+                                            <div class="FooLogo">
+                                                <a href="#"
+                                                    ><img
+                                                        src="https://amusemakeup.cafe24.com/web/upload/NNEditor/20201006/487150516b531dc46b1c07bab3ed80b8.png"
+                                                        alt="어뮤즈푸터로고"
+                                                /></a>
+                                            </div>
+                                            <div class="FSns">
+                                                <ul>
+                                                    <li class="SnsIns">
+                                                        <a href="https://www.instagram.com/amuse/" target="_blank"
+                                                            ><i class="xi-instagram"></i
+                                                        ></a>
+                                                    </li>
+                                                    <li class="SnsTic">
+                                                        <a
+                                                            href="https://www.tiktok.com/@amuse_official?lang=ko-KR"
+                                                            title="tiktok"
+                                                            target="_blank"
+                                                            ><img src="./img/main/icon_tiktok_b.png" alt="tiktok"
+                                                        /></a>
+                                                    </li>
+                                                    <li class="SnsTalk">
+                                                        <a
+                                                            href="https://pf.kakao.com/_ITBsj"
+                                                            title="kakaotalk"
+                                                            target="_blank"
+                                                            ><i class="xi-kakaotalk"></i
+                                                        ></a>
+                                                    </li>
+                                                    <li class="SnsTwt">
+                                                        <a
+                                                            href="https://twitter.com/amuse_kr"
+                                                            title="twitter"
+                                                            target="_blank"
+                                                            ><i class="xi-twitter"></i
+                                                        ></a>
+                                                    </li>
+                                                </ul>
+
+                                                <div class="copyright">
+                                                    <span> ©Kimdasol all right reserved. </span>
+                                                </div>
+                                                <div class="GuideLine">
+                                                    <ul>
+                                                        <li><a href="#">이용약관</a></li>
+                                                        <li><a href="#">개인정보처리방침</a></li>
+                                                        <li><a href="#">사업자정보확인</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td cope="col" class="b">
+                                            <div class="FInfo">
+                                                <div class="FTit">CUSTOMER CENTER</div>
+                                                <div class="FData">
+                                                    <p class="call">
+                                                        <span class="CallNum">1833-7689</span>
+                                                    </p>
+                                                    <p>
+                                                        <span class="open1">MON - FRI 9AM - 5PM</span>
+                                                    </p>
+                                                    <p>
+                                                        <span class="open2">LUNCH 12PM - 1PM</span>
+                                                    </p>
+                                                    <p>
+                                                        <span class="open3">SAT.SUN.HOLIDAY OFF</span>
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td cope="col" class="c">
+                                            <div class="FInfo">
+                                                <ul>
+                                                    <li><a href="#">ABOUT</a></li>
+                                                    <li><a href="#">MYPAGE</a></li>
+                                                    <li><a href="#">STORE</a></li>
+                                                    <li><a href="#">Q&amp;A</a></li>
+                                                    <li>
+                                                        <a href="#"
+                                                            >WHOLESALE / PARTNERSHIP<br /><span
+                                                                >help_amuse@amusemakeup.com</span
+                                                            ></a
+                                                        >
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <address>
+                        <div class="FooLogo_mo">
+                            <a href="#"
+                                ><img
+                                    src="https://amusemakeup.cafe24.com/web/upload/NNEditor/20201006/487150516b531dc46b1c07bab3ed80b8.png"
+                                    alt="어뮤즈푸터로고"
+                            /></a>
+                        </div>
+                        <div class="Foo_mo">
+                            <dl>
+                                <dt>CUSTOMER CENTER</dt>
+                                <dd>
+                                    <div class="CS">
+                                        <div class="sec">
+                                            <div class="inner">
+                                                <h3>고객센터</h3>
+                                                <p class="CsInfo">
+                                                    <span class="CsNum"> 1833-7689 </span>
+                                                </p>
+
+                                                <p>
+                                                    <span client="TimeInfo">MON - FRI 9AM - 5PM</span>
+                                                </p>
+                                                <p><span client="TimeInfo">LUNCH 12PM - 1PM</span></p>
+                                                <p>
+                                                    <span client="TimeInfo">SAT.SUN.HOLIDAY OFF</span>
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="sec">
+                                            <div class="inner">
+                                                <h3>무통장 계좌안내</h3>
+                                                <p class="account">
+                                                    <span class="AccountName">예금주 : 주식회사어뮤즈</span>
+                                                </p>
+                                                <p>
+                                                    <span class="AccountInfo1">신한은행</span>
+                                                    <span class="AccountInfo2">1000-3264-1103</span>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </dd>
+                                <a href="#">ABOUT</a>
+                                <a href="#">MYPAGE</a>
+                                <a href="#">Q&amp;A</a>
+                                <a href="#">STORE</a>
+                                <a href="#">WHOLESALE / PARTNERSHIP<br /><span>help_amuse@amusemakeup.com</span></a>
+                            </dl>
+                        </div>
+                        <div class="Link">
+                            <ul>
+                                <li><a href="#">이용약관</a></li>
+                                <li><a href="#">개인정보처리방침</a></li>
+                                <li><a href="#">사업자정보확인</a></li>
+                            </ul>
+                        </div>
+                        <div class="info">
+                            <dl>
+                                <dt>주식회사 어뮤즈</dt>
+                                <dd></dd>
+                            </dl>
+                            <dl>
+                                <dt>대표이사</dt>
+                                <dd>김창욱, 이승민</dd>
+                            </dl>
+                            <dl>
+                                <dt>주소</dt>
+                                <dd>경기도 성남시 분당구 분당내곡로 131 (백현동)<br />8층</dd>
+                            </dl>
+                            <dl class="num1">
+                                <dt>대표전화/고객센터</dt>
+                                <dd><a href="tel:1833-7689">1833-7689</a></dd>
+                            </dl>
+                            <dl class="num2">
+                                <dt>사업자등록번호</dt>
+                                <dd>392-87-00797</dd>
+                            </dl>
+                            <dl class="about">
+                                <dt>통신판매업신고</dt>
+                                <dd>2018-성남분당-0179</dd>
+                            </dl>
+                        </div>
+                        <div class="sns">
+                            <ul>
+                                <li class="SnsIns">
+                                    <a href="https://www.instagram.com/amuse/" target="_blank"
+                                        ><i class="xi-instagram"></i
+                                    ></a>
+                                </li>
+                                <li class="SnsTic">
+                                    <a
+                                        href="https://www.tiktok.com/@amuse_official?lang=ko-KR"
+                                        title="tiktok"
+                                        target="_blank"
+                                        ><img src="./img/main/icon_tiktok_b.png" alt="tiktok"
+                                    /></a>
+                                </li>
+                                <li class="SnsTalk">
+                                    <a href="https://pf.kakao.com/_ITBsj" title="kakaotalk" target="_blank"
+                                        ><i class="xi-kakaotalk"></i
+                                    ></a>
+                                </li>
+                                <li class="SnsTwt">
+                                    <a href="https://twitter.com/amuse_kr" title="twitter" target="_blank"
+                                        ><i class="xi-twitter"></i
+                                    ></a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="copyright">Hosting by Cafe24</div>
+                        <div class="copyright">COPYRIGHT © <b>AMUSE</b> ALL RIGHT RESERVED.</div>
+                    </address>
+                </footer>
+            </div>
+        </div>
+        <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+        <script>
+            AOS.init();
+        </script>
+    </body>
+</html>
