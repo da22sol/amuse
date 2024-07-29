@@ -1,8 +1,8 @@
 @charset "utf-8";
 @import url(./../style/main/main.css);
 
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
-@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-dynamic-subset.min.css");
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-dynamic-subset.min.css');
 
 *,
 *::before,
@@ -17,7 +17,7 @@ html {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   font-size: 20px;
-  font-family: "pretendard", sans-serif;
+  font-family: 'pretendard', sans-serif;
   width: 100%;
   margin: 0;
   padding: 0;
@@ -27,7 +27,7 @@ body {
   overflow: hidden;
 
   font-size: 0.8rem;
-  font-family: "pretendard", sans-serif;
+  font-family: 'pretendard', sans-serif;
   overflow-y: auto !important;
   width: 100%;
   margin: 0;
@@ -36,7 +36,7 @@ body {
 }
 
 html.open::before {
-  content: "";
+  content: '';
   position: fixed;
   top: 0;
   left: 0;
@@ -140,7 +140,7 @@ strong {
 a {
   color: inherit;
   text-decoration: none;
-  font-family: "Noto Sans KR", sans-serif;
+  font-family: 'Noto Sans KR', sans-serif;
 }
 
 button {
@@ -171,6 +171,16 @@ section {
   height: 100%;
 }
 
+/* 어바웃 */
+
+.bold {
+  border-radius: 50%;
+  background-color: #ff85d1;
+  width: 45px;
+  height: 45px;
+}
+
+/* 헤더 */
 header {
   position: absolute;
   width: 100%;
@@ -324,7 +334,7 @@ header .HeaderTop {
 }
 
 .JOIN::before {
-  content: "";
+  content: '';
   display: block;
   position: absolute;
   top: 50%;
@@ -344,11 +354,46 @@ header .HeaderTop {
 .hide {
   display: none;
 }
+
+/* 팝업 */
+
+/* .popup:before {
+  display: block;
+  content: '';
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 9000;
+} */
+.popup .layer {
+  z-index: 10000;
+  position: fixed;
+  left: 50%;
+  top: -40%;
+  transform: translate(-50%, -10%);
+  padding: 30px;
+  background: #ff85d1;
+  border-radius: 6px;
+  transition: transform 0.3s ease-in-out;
+}
+.popup .layer.show {
+  transform: translate(-50%, 10%);
+  top: 20px;
+}
+.popup .layer h2 {
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+  font-weight: 600;
+  border-bottom: 1px solid #d9d9d9;
+}
+
 /* 메인 */
 #wrap {
   width: 100%;
   min-width: 320px;
-
 }
 
 /* 푸터 */
@@ -444,7 +489,7 @@ footer {
   display: none;
 }
 .GuideLine > ul > li:before {
-  content: "";
+  content: '';
   display: block;
   position: absolute;
   top: 50%;
@@ -528,7 +573,7 @@ address .FooLogo_mo img {
 }
 
 .Foo_mo dl dt::before {
-  content: "\e9c5";
+  content: '\e9c5';
   display: block;
   position: absolute;
   top: 50%;
@@ -537,13 +582,13 @@ address .FooLogo_mo img {
   margin-top: -15px;
   font-size: 16px;
   line-height: 30px;
-  font-family: "xeicon" !important;
+  font-family: 'xeicon' !important;
   display: inline-block;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 .Foo_mo dl dt.on::before {
-  content: "\e9c1";
+  content: '\e9c1';
 }
 
 .Foo_mo .CS {
@@ -695,7 +740,6 @@ address .FooLogo_mo img {
   width: 24px;
 }
 
-
 /* 모바일 */
 
 @media (max-width: 540px) {
@@ -708,12 +752,12 @@ address .FooLogo_mo img {
   .logo img {
     height: 16px;
   }
-    /* footer */
-    .FooterInner {
-      display: none;
-    }
-  
-    footer address {
-      display: block;
-    }
+  /* footer */
+  .FooterInner {
+    display: none;
+  }
+
+  footer address {
+    display: block;
+  }
 }

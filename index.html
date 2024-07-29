@@ -1,786 +1,768 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>AMUSE</title>
-        <!-- css -->
-        <link rel="stylesheet" href="./style/style.css" />
-        <!-- cdn -->
-        <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css" />
-        <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
-        <!-- js -->
-        <script src="./js/js.js"></script>
-        <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-    </head>
-    <body>
-        <div id="wrap">
-            <header id="header">
-                <div class="HeaderTop">
-                    <div class="header-content">
-                        <h1 class="logo">
-                            <img
-                                src="https://amusemakeup.cafe24.com/web/upload/NNEditor/20201006/487150516b531dc46b1c07bab3ed80b8.png"
-                                alt="어뮤즈로고"
-                            />
-                        </h1>
-                        <nav>
-                            <div class="NavWrap">
-                                <div class="gnb">
-                                    <ul>
-                                        <li class="GnbList Menubtn" id="MenuBox">
-                                            <i class="xi-bars"></i>
-                                            <a href="#" class="GnbItm">menu</a>
-                                        </li>
-                                        <li class="GnbList" id="profile">
-                                            <i class="xi-user-o"></i><a href="#" class="GnbItm">프로필</a>
-                                        </li>
-                                        <li class="GnbList" id="cart">
-                                            <i class="xi-cart-o"></i><a href="#" class="GnbItm">장바구니</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </nav>
-                    </div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AMUSE</title>
+    <!-- css -->
+    <link rel="stylesheet" href="./style/style.css" />
+    <!-- cdn -->
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css" />
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <!-- js -->
+    <script src="./js/js.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  </head>
+  <body>
+    <div id="wrap">
+      <header id="header">
+        <div class="HeaderTop">
+          <div class="header-content">
+            <h1 class="logo">
+              <img
+                src="https://amusemakeup.cafe24.com/web/upload/NNEditor/20201006/487150516b531dc46b1c07bab3ed80b8.png"
+                alt="어뮤즈로고"
+              />
+            </h1>
+            <nav>
+              <div class="NavWrap">
+                <div class="gnb">
+                  <ul>
+                    <li class="GnbList Menubtn" id="MenuBox">
+                      <i class="xi-bars"></i>
+                      <a href="#" class="GnbItm">menu</a>
+                    </li>
+                    <li class="GnbList" id="profile"><i class="xi-user-o"></i><a href="#" class="GnbItm">프로필</a></li>
+                    <li class="GnbList" id="cart"><i class="xi-cart-o"></i><a href="#" class="GnbItm">장바구니</a></li>
+                  </ul>
                 </div>
-                <div class="MenuWrap">
-                    <div class="MenuLayout">
-                        <span class="CloseBtn">×</span>
-                        <div class="scroll">
-                            <ul>
-                                <li class="MenuList" id="MenuInfo">
-                                    <div class="MenuMy">
-                                        <div class="LogBox">
-                                            <span class="UserLine"><a href="#">LOGIN</a></span>
-                                            <span class="UserLine JOIN"><a href="#">JOIN</a></span>
-                                            <span class="UserLine MYPAGE"><a href="#">MYPAGE</a></span>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class="MenuList">
-                                    <a href="#"><span>SHOPALL</span></a>
-                                    <div class="ShopList">
-                                        <ul>
-                                            <li><a href="#">BEST</a></li>
-                                            <li><a href="#">ONLYAMUSE</a></li>
-                                            <li><a href="#">FACE</a></li>
-                                            <li><a href="#">SUNCARE</a></li>
-                                            <li><a href="#">LIP</a></li>
-                                            <li><a href="#">EYES</a></li>
-                                            <li><a href="#">WELLNESS</a></li>
-                                            <li><a href="#">AgoodMUSE</a></li>
-                                        </ul>
-                                    </div>
-                                </li>
-                                <li class="MenuList">
-                                    <a href="./page/about.html"><span class="sub">ABOUT</span></a>
-                                    <div class="ShopList hide">
-                                        <ul>
-                                            <li><a href="#">ABOUT US</a></li>
-                                            <li><a href="#">ABOUT GIRL</a></li>
-                                            <li><a href="#">MEMBERSHIP</a></li>
-                                            <li><a href="#">LOOKBOOK</a></li>
-                                        </ul>
-                                    </div>
-                                </li>
-                                <li class="MenuList"><a href="#">WELLNESS</a></li>
-                                <li class="MenuList"><a href="#">SHOWROOM</a></li>
-                                <li class="MenuList">
-                                    <a href="#"><span class="sub">STOCKIST</span></a>
-                                    <div class="ShopList hide">
-                                        <ul>
-                                            <li><a href="#">OFFLINE STORE</a></li>
-                                            <li><a href="#">ONLINE STORE</a></li>
-                                            <li><a href="#">GLOBAL STORE</a></li>
-                                        </ul>
-                                    </div>
-                                </li>
-                                <li class="MenuList">
-                                    <a href="#"><span class="sub">COMMUNITY</span></a>
-                                    <div class="ShopList hide">
-                                        <ul>
-                                            <li><a href="#">EVENT</a></li>
-                                            <li><a href="#">REVIEW</a></li>
-                                            <li><a href="#">NOTICE</a></li>
-                                            <li><a href="#">FAQ</a></li>
-                                        </ul>
-                                    </div>
-                                </li>
-                            </ul>
-                        </div>
+              </div>
+            </nav>
+          </div>
+        </div>
+        <div class="MenuWrap">
+          <div class="MenuLayout">
+            <span class="CloseBtn">×</span>
+            <div class="scroll">
+              <ul>
+                <li class="MenuList" id="MenuInfo">
+                  <div class="MenuMy">
+                    <div class="LogBox">
+                      <span class="UserLine"><a href="#">LOGIN</a></span>
+                      <span class="UserLine JOIN"><a href="#">JOIN</a></span>
+                      <span class="UserLine MYPAGE"><a href="#">MYPAGE</a></span>
                     </div>
-                </div>
-            </header>
-
-            <div class="main">
-                <section class="section1" id="section1">
-                    <div class="MainSlide">
-                        <div class="slide" id="slide">
-                            <div class="banner swiper-container swiper1">
-                                <div class="swiper-wrapper">
-                                    <div class="swiper-slide">
-                                        <div class="ColorBox1">
-                                            <div class="ImgBox1"></div>
-                                            <div class="SlideTxt1">
-                                                <div class="SlideTxt">
-                                                    <p><span>DEW POWER</span>CUSHION</p>
-                                                    <p>
-                                                        맑은 윤결광 피부
-                                                        <br />
-                                                        NEW 듀 파워 비건 쿠션 런칭
-                                                    </p>
-                                                    <a href="#">SHOP NOW</a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <div class="ColorBox2">
-                                            <div class="ImgBox2"></div>
-                                            <div class="SlideTxt2">
-                                                <div class="SlideTxt">
-                                                    <p><span>NEW DEW</span>TINT</p>
-                                                    <p>
-                                                        맑은 윤결광 피부
-                                                        <br />
-                                                        NEW 듀 파워 비건 쿠션 런칭
-                                                    </p>
-                                                    <a href="#">SHOP NOW</a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <div class="ColorBox3">
-                                            <div class="ImgBox3"></div>
-                                            <div class="SlideTxt3">
-                                                <div class="SlideTxt">
-                                                    <p>BUNNY TONGUE EDITION</p>
-                                                    <p>
-                                                        매끈 도자기 피부
-                                                        <br />
-                                                        NEW 듀 파워 비건 쿠션 런칭
-                                                    </p>
-                                                    <a href="#">SHOP NOW</a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <div class="ColorBox4">
-                                            <div class="ImgBox4"></div>
-                                            <div class="SlideTxt4">
-                                                <div class="SlideTxt">
-                                                    <p><span>DEW CERAMIC</span>CUSHION</p>
-                                                    <p>
-                                                        맑은 윤결광 피부
-                                                        <br />
-                                                        NEW 듀 세라믹 스킨 쿠션 런칭
-                                                    </p>
-                                                    <a href="#" class="black">SHOP NOW</a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-
-                <section class="section2" id="section2">
-                    <div class="TxtBlock">
-                        <div class="track">
-                            <div class="BlockTxt">
-                                &nbsp;INSPIRED BY SEOULER&nbsp; INSPIRED BY SEOULER&nbsp;INSPIRED BY
-                                SEOULER&nbsp;INSPIRED BY SEOULER&nbsp;INSPIRED BY SEOULER&nbsp;INSPIRED BY
-                                SEOULER&nbsp;INSPIRED BY SEOULER&nbsp;INSPIRED BY SEOULER&nbsp;INSPIRED BY SEOULER&nbsp;
-                            </div>
-                        </div>
-                    </div>
-                </section>
-
-                <section class="section3" id="section3">
-                    <div class="layout">
-                        <div class="NewIn">
-                            <h1>NEW</h1>
-                            <div class="swiper-container swiper2 NewBox">
-                                <ul class="swiper-wrapper ItmSlide">
-                                    <li class="swiper-slide ItmList">
-                                        <div class="NewBox">
-                                            <div class="NewThumb">
-                                                <a href="#"><img src="./img/main/new6.jpg" alt="신제품" /></a>
-                                            </div>
-                                            <div class="NewTxt">
-                                                <span>상품명</span>
-                                                <span>버니 텅 립 앤 치크 키트 + 립 브러쉬</span>
-                                                <span>가격</span> <span>00,000</span>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li class="swiper-slide ItmList">
-                                        <div class="NewBox">
-                                            <div class="NewThumb">
-                                                <a href="#"><img src="./img/main/new3.jpg" alt="신제품" /></a>
-                                            </div>
-                                            <div class="NewTxt">
-                                                <span>상품명</span> <span>듀 틴트 듀오 세트</span> <span>가격</span>
-                                                <span>00,000</span>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li class="swiper-slide ItmList">
-                                        <div class="NewBox">
-                                            <div class="NewThumb">
-                                                <a href="#"><img src="./img/main/new1.jpg" alt="신제품" /></a>
-                                            </div>
-                                            <div class="NewTxt">
-                                                <span>상품명</span> <span>듀 틴트 듀오 세트</span> <span>가격</span>
-                                                <span>00,000</span>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li class="swiper-slide ItmList">
-                                        <div class="NewBox">
-                                            <div class="NewThumb">
-                                                <a href="#"><img src="./img/main/new2.jpg" alt="신제품" /></a>
-                                            </div>
-                                            <div class="NewTxt">
-                                                <span>상품명</span>
-                                                <span>듀 파워 비건 쿠션 세트(본품+리필2ea)</span>
-                                                <span>가격</span> <span>00,000</span>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li class="swiper-slide ItmList">
-                                        <div class="NewBox">
-                                            <div class="NewThumb">
-                                                <a href="#"><img src="./img/main/new5.jpg" alt="신제품" /></a>
-                                            </div>
-                                            <div class="NewTxt">
-                                                <span>상품명</span> <span>말랑 젤리 립 브러쉬</span> <span>가격</span>
-                                                <span>00,000</span>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li class="swiper-slide ItmList">
-                                        <div class="NewBox">
-                                            <div class="NewThumb">
-                                                <a href="#"><img src="./img/main/new4.jpg" alt="신제품" /></a>
-                                            </div>
-                                            <div class="NewTxt">
-                                                <span>상품명</span>
-                                                <span>비건 쿠션 리필 2ea 세트</span> <span>가격</span>
-                                                <span>00,000</span>
-                                            </div>
-                                        </div>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-
-                <section class="section4" id="section4">
-                    <div class="product">
-                        <div class="swiper-container swiper3 LeftSlid">
-                            <ul class="swiper-wrapper SlideImg">
-                                <li class="swiper-slide ImgList">
-                                    <img src="./img/main/sl_left1.jpeg" alt="상품배너이미지" />
-                                </li>
-                                <li class="swiper-slide ImgList">
-                                    <img src="./img/main/sl_left2.jpeg" alt="상품배너이미지" />
-                                </li>
-                                <li class="swiper-slide ImgList">
-                                    <img src="./img/main/sl_left3.jpeg" alt="상품배너이미지" />
-                                </li>
-                                <li class="swiper-slide ImgList">
-                                    <img src="./img/main/sl_left4.jpeg" alt="상품배너이미지" />
-                                </li>
-                                <li class="swiper-slide ImgList">
-                                    <img src="./img/main/sl_left5.jpeg" alt="상품배너이미지" />
-                                </li>
-                                <li class="swiper-slide ImgList">
-                                    <img src="./img/main/sl_left6.jpeg" alt="상품배너이미지" />
-                                </li>
-                            </ul>
-                        </div>
-
-                        <div class="ItmContents">
-                            <article class="ConTitle">
-                                <p>best</p>
-                                <p>AMUSE PICK!</p>
-                            </article>
-                            <ul class="BestItm">
-                                <li class="BestList" data-swiper-slide-index="0">
-                                    <div class="BestImg">
-                                        <img src="./img/main/sl_right3.png" alt="상품이미지" />
-                                    </div>
-                                    <div class="BestTxt">
-                                        <p>비건 쿠션 리필 2ea 세트</p>
-                                        <p>FACE</p>
-                                    </div>
-                                    <div class="BestLink"><p>SHOP</p></div>
-                                </li>
-                                <li class="BestList" data-swiper-slide-index="1">
-                                    <div class="BestImg">
-                                        <img src="./img/main/sl_right4.png" alt="상품이미지" />
-                                    </div>
-                                    <div class="BestTxt">
-                                        <p>듀 웨어 파운데이션</p>
-                                        <p>FACE</p>
-                                    </div>
-                                    <div class="BestLink"><p>SHOP</p></div>
-                                </li>
-                                <li class="BestList" data-swiper-slide-index="2">
-                                    <div class="BestImg">
-                                        <img src="./img/main/sl_right1.png" alt="상품이미지" />
-                                    </div>
-                                    <div class="BestTxt">
-                                        <p>젤핏 틴트</p>
-                                        <p>LIP</p>
-                                    </div>
-                                    <div class="BestLink"><p>SHOP</p></div>
-                                </li>
-                                <li class="BestList" data-swiper-slide-index="3">
-                                    <div class="BestImg">
-                                        <img src="./img/main/sl_right5.png" alt="상품이미지" />
-                                    </div>
-                                    <div class="BestTxt">
-                                        <p>마이 어뮤즈 미러</p>
-                                        <p>GIFT</p>
-                                    </div>
-                                    <div class="BestLink"><p>SHOP</p></div>
-                                </li>
-                                <li class="BestList" data-swiper-slide-index="4">
-                                    <div class="BestImg">
-                                        <img src="./img/main/sl_right6.png" alt="상품이미지" />
-                                    </div>
-                                    <div class="BestTxt">
-                                        <p>듀 틴트</p>
-                                        <p>LIP</p>
-                                    </div>
-                                    <div class="BestLink"><p>SHOP</p></div>
-                                </li>
-                                <li class="BestList" data-swiper-slide-index="5">
-                                    <div class="BestImg">
-                                        <img src="./img/main/sl_right2.png" alt="상품이미지" />
-                                    </div>
-                                    <div class="BestTxt">
-                                        <p>아이 컬러 팔레트</p>
-                                        <p>EYES</p>
-                                    </div>
-                                    <div class="BestLink"><p>SHOP</p></div>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </section>
-
-                <section class="section5" id="section5">
-                    <div class="product">
-                        <div class="VeganLeft">
-                            <img src="./img/main/ve5.gif" alt="비건왼쪽이미지" />
-                        </div>
-                        <div class="VeganBox">
-                            <div class="VeganTit">
-                                <h2>I'M VEGAN</h2>
-                                <div class="VeTxt">
-                                    <p>AMUSE 는 환경과 지속 가능성을 생각하는</p>
-                                    <p>이브 비건 (EVE VEGAN) 인증을 획득한</p>
-                                    <p>비건 & 웰니스 뷰티 큐레이션을 선보입니다.</p>
-                                </div>
-                                <ul class="VeContents">
-                                    <li class="VeList">
-                                        <div class="VeImg">
-                                            <img src="./img/main/ve2.png" alt="비건_AMRA&AZ" />
-                                        </div>
-                                        <article>
-                                            <p>AMUSE <em>girl</em> AMARA</p>
-                                            <p>AMARA는 AMUSE의 세계관을 이야기하는 K-VIRTUAL GIRL</p>
-                                            <p>비건&웰니스를 사랑하는 영 비거니스트</p>
-                                            <a href="#">SHOP NOW</a>
-                                        </article>
-                                    </li>
-                                    <li class="VeList">
-                                        <div class="VeImg">
-                                            <img src="./img/main/ve1.jpeg" alt="비건_어뮤즈쇼름" />
-                                        </div>
-                                        <article>
-                                            <p>AMUSE SHOWROOM</p>
-                                            <p>AMUSE의 비건 무드 공간</p>
-                                            <p>AMUSE 한남 쇼룸에서 새로운 비건 뷰티 라이프를 시작해보세요.</p>
-                                            <a href="#">SHOP NOW</a>
-                                        </article>
-                                    </li>
-                                    <li class="VeList">
-                                        <div class="VeImg">
-                                            <img src="./img/main/ve3.jpg" alt="비건상품" />
-                                        </div>
-                                        <article>
-                                            <p>AMUSE WELLNESS</p>
-                                            <p>GOOD VEGAN life, WELLNESS</p>
-                                            <p>건강하고 균형잡힌 웰니스 라이프스타일 뷰티를 제공합니다.</p>
-                                            <a href="#">SHOP NOW</a>
-                                        </article>
-                                    </li>
-                                    <li class="VeList">
-                                        <div class="VeImg">
-                                            <img src="./img/main/ve4.png" alt="비건_어뮤즈웰니스책" />
-                                        </div>
-                                        <article>
-                                            <p class="TxtP"><em>AMUSE x STICKHER</em> 웰니스북</p>
-                                            <p>하루를 채우는 작은습관과 수칙 70가지</p>
-                                            <p>웰니스 생활규칙과 실천노하우를 제시하는 책</p>
-                                            <a href="#">SHOP NOW</a>
-                                        </article>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-                <section class="section5_mo" id="section5_mo">
-                    <div class="MoInner swiper-container swiper1">
-                        <ul class="inner1">
-                            <li class="MoTit">I'M VEGAN</li>
-                            <li class="MoImg">
-                                <img src="./img/main/veicon.png" alt="어뮤즈비건로고" />
-                            </li>
-                            <li class="MoTxt">
-                                <span>
-                                    <b>AMUSE</b> 는 환경과 지속 가능성을 생각하는<br />이브 비건 (EVE VEGAN) 인증을
-                                    획득한<br />비건 &amp; 웰니스 뷰티 큐레이션을 선보입니다.
-                                </span>
-                            </li>
-                        </ul>
-                        <ul class="inner2 swiper-wrapper">
-                            <li class="swiper-slide">
-                                <img src="./img/main/ve1_mo.png" alt="비건_AMRA&AZ" />
-                                <a href="#"><span>SHOP NOW</span></a>
-                            </li>
-                            <li class="swiper-slide">
-                                <img src="./img/main/ve2_mo.png" alt="비건_어뮤즈쇼름" />
-                                <a href="#"><span>SHOP NOW</span></a>
-                            </li>
-                            <li class="swiper-slide">
-                                <img src="./img/main/ve3_mo.png" alt="비건상품" />
-                                <a href="#"><span>SHOP NOW</span></a>
-                            </li>
-                            <li class="swiper-slide">
-                                <img src="./img/main/ve4_mo.png" alt="비건_어뮤즈웰니스책" />
-                                <a href="#"><span>SHOP NOW</span></a>
-                            </li>
-                        </ul>
-                    </div>
-                </section>
-
-                <section class="section6" id="section6">
-                    <div class="layout">
-                        <div class="InsTit"><h1>#WELLNESS FACE COOLER</h1></div>
-                        <div class="InstagramBox">
-                            <div class="InsGrid">
-                                <div class="GridItm">
-                                    <img src="./img/main/ins1.jpg" alt="어뮤즈인스타그램" />
-                                </div>
-                                <div class="GridItm">
-                                    <img src="./img/main/ins2.jpg" alt="어뮤즈인스타그램" />
-                                </div>
-                                <div class="GridItm">
-                                    <img src="./img/main/ins3.jpg" alt="어뮤즈인스타그램" />
-                                </div>
-                                <div class="GridItm">
-                                    <img src="./img/main/ins4.jpg" alt="어뮤즈인스타그램" />
-                                </div>
-                                <div class="GridItm">
-                                    <img src="./img/main/ins5.jpg" alt="어뮤즈인스타그램" />
-                                </div>
-                                <div class="GridItm">
-                                    <img src="./img/main/ins6.jpg" alt="어뮤즈인스타그램" />
-                                </div>
-                                <div class="GridItm">
-                                    <img src="./img/main/ins7.jpg" alt="어뮤즈인스타그램" />
-                                </div>
-                                <div class="GridItm">
-                                    <img src="./img/main/ins8.jpg" alt="어뮤즈인스타그램" />
-                                </div>
-                                <div class="GridItm">
-                                    <img src="./img/main/ins9.jpg" alt="어뮤즈인스타그램" />
-                                </div>
-                                <div class="GridItm">
-                                    <img src="./img/main/ins10.jpg" alt="어뮤즈인스타그램" />
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-
-                <footer>
-                    <div class="FooterInner">
-                        <div class="FooterWrap">
-                            <table border="0" summary="" cellspacing="0" cellpadding="0">
-                                <colgroup>
-                                    <col style="width: auto" />
-                                    <col style="width: 32%" />
-                                    <col style="width: 32%" />
-                                </colgroup>
-                                <tbody>
-                                    <tr>
-                                        <td scope="col" class="a">
-                                            <div class="FooLogo">
-                                                <a href="#"
-                                                    ><img
-                                                        src="https://amusemakeup.cafe24.com/web/upload/NNEditor/20201006/487150516b531dc46b1c07bab3ed80b8.png"
-                                                        alt="어뮤즈푸터로고"
-                                                /></a>
-                                            </div>
-                                            <div class="FSns">
-                                                <ul>
-                                                    <li class="SnsIns">
-                                                        <a href="https://www.instagram.com/amuse/" target="_blank"
-                                                            ><i class="xi-instagram"></i
-                                                        ></a>
-                                                    </li>
-                                                    <li class="SnsTic">
-                                                        <a
-                                                            href="https://www.tiktok.com/@amuse_official?lang=ko-KR"
-                                                            title="tiktok"
-                                                            target="_blank"
-                                                            ><img src="./img/main/icon_tiktok_b.png" alt="tiktok"
-                                                        /></a>
-                                                    </li>
-                                                    <li class="SnsTalk">
-                                                        <a
-                                                            href="https://pf.kakao.com/_ITBsj"
-                                                            title="kakaotalk"
-                                                            target="_blank"
-                                                            ><i class="xi-kakaotalk"></i
-                                                        ></a>
-                                                    </li>
-                                                    <li class="SnsTwt">
-                                                        <a
-                                                            href="https://twitter.com/amuse_kr"
-                                                            title="twitter"
-                                                            target="_blank"
-                                                            ><i class="xi-twitter"></i
-                                                        ></a>
-                                                    </li>
-                                                </ul>
-
-                                                <div class="copyright">
-                                                    <span> ©Kimdasol all right reserved. </span>
-                                                </div>
-                                                <div class="GuideLine">
-                                                    <ul>
-                                                        <li><a href="#">이용약관</a></li>
-                                                        <li><a href="#">개인정보처리방침</a></li>
-                                                        <li><a href="#">사업자정보확인</a></li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </td>
-                                        <td cope="col" class="b">
-                                            <div class="FInfo">
-                                                <div class="FTit">CUSTOMER CENTER</div>
-                                                <div class="FData">
-                                                    <p class="call">
-                                                        <span class="CallNum">1833-7689</span>
-                                                    </p>
-                                                    <p>
-                                                        <span class="open1">MON - FRI 9AM - 5PM</span>
-                                                    </p>
-                                                    <p>
-                                                        <span class="open2">LUNCH 12PM - 1PM</span>
-                                                    </p>
-                                                    <p>
-                                                        <span class="open3">SAT.SUN.HOLIDAY OFF</span>
-                                                    </p>
-                                                </div>
-                                            </div>
-                                        </td>
-                                        <td cope="col" class="c">
-                                            <div class="FInfo">
-                                                <ul>
-                                                    <li><a href="#">ABOUT</a></li>
-                                                    <li><a href="#">MYPAGE</a></li>
-                                                    <li><a href="#">STORE</a></li>
-                                                    <li><a href="#">Q&amp;A</a></li>
-                                                    <li>
-                                                        <a href="#"
-                                                            >WHOLESALE / PARTNERSHIP<br /><span
-                                                                >help_amuse@amusemakeup.com</span
-                                                            ></a
-                                                        >
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-                    <address>
-                        <div class="FooLogo_mo">
-                            <a href="#"
-                                ><img
-                                    src="https://amusemakeup.cafe24.com/web/upload/NNEditor/20201006/487150516b531dc46b1c07bab3ed80b8.png"
-                                    alt="어뮤즈푸터로고"
-                            /></a>
-                        </div>
-                        <div class="Foo_mo">
-                            <dl>
-                                <dt>CUSTOMER CENTER</dt>
-                                <dd>
-                                    <div class="CS">
-                                        <div class="sec">
-                                            <div class="inner">
-                                                <h3>고객센터</h3>
-                                                <p class="CsInfo">
-                                                    <span class="CsNum"> 1833-7689 </span>
-                                                </p>
-
-                                                <p>
-                                                    <span client="TimeInfo">MON - FRI 9AM - 5PM</span>
-                                                </p>
-                                                <p><span client="TimeInfo">LUNCH 12PM - 1PM</span></p>
-                                                <p>
-                                                    <span client="TimeInfo">SAT.SUN.HOLIDAY OFF</span>
-                                                </p>
-                                            </div>
-                                        </div>
-                                        <div class="sec">
-                                            <div class="inner">
-                                                <h3>무통장 계좌안내</h3>
-                                                <p class="account">
-                                                    <span class="AccountName">예금주 : 주식회사어뮤즈</span>
-                                                </p>
-                                                <p>
-                                                    <span class="AccountInfo1">신한은행</span>
-                                                    <span class="AccountInfo2">1000-3264-1103</span>
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </dd>
-                                <a href="#">ABOUT</a>
-                                <a href="#">MYPAGE</a>
-                                <a href="#">Q&amp;A</a>
-                                <a href="#">STORE</a>
-                                <a href="#">WHOLESALE / PARTNERSHIP<br /><span>help_amuse@amusemakeup.com</span></a>
-                            </dl>
-                        </div>
-                        <div class="Link">
-                            <ul>
-                                <li><a href="#">이용약관</a></li>
-                                <li><a href="#">개인정보처리방침</a></li>
-                                <li><a href="#">사업자정보확인</a></li>
-                            </ul>
-                        </div>
-                        <div class="info">
-                            <dl>
-                                <dt>주식회사 어뮤즈</dt>
-                                <dd></dd>
-                            </dl>
-                            <dl>
-                                <dt>대표이사</dt>
-                                <dd>김창욱, 이승민</dd>
-                            </dl>
-                            <dl>
-                                <dt>주소</dt>
-                                <dd>경기도 성남시 분당구 분당내곡로 131 (백현동)<br />8층</dd>
-                            </dl>
-                            <dl class="num1">
-                                <dt>대표전화/고객센터</dt>
-                                <dd><a href="tel:1833-7689">1833-7689</a></dd>
-                            </dl>
-                            <dl class="num2">
-                                <dt>사업자등록번호</dt>
-                                <dd>392-87-00797</dd>
-                            </dl>
-                            <dl class="about">
-                                <dt>통신판매업신고</dt>
-                                <dd>2018-성남분당-0179</dd>
-                            </dl>
-                        </div>
-                        <div class="sns">
-                            <ul>
-                                <li class="SnsIns">
-                                    <a href="https://www.instagram.com/amuse/" target="_blank"
-                                        ><i class="xi-instagram"></i
-                                    ></a>
-                                </li>
-                                <li class="SnsTic">
-                                    <a
-                                        href="https://www.tiktok.com/@amuse_official?lang=ko-KR"
-                                        title="tiktok"
-                                        target="_blank"
-                                        ><img src="./img/main/icon_tiktok_b.png" alt="tiktok"
-                                    /></a>
-                                </li>
-                                <li class="SnsTalk">
-                                    <a href="https://pf.kakao.com/_ITBsj" title="kakaotalk" target="_blank"
-                                        ><i class="xi-kakaotalk"></i
-                                    ></a>
-                                </li>
-                                <li class="SnsTwt">
-                                    <a href="https://twitter.com/amuse_kr" title="twitter" target="_blank"
-                                        ><i class="xi-twitter"></i
-                                    ></a>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="copyright">Hosting by Cafe24</div>
-                        <div class="copyright">COPYRIGHT © <b>AMUSE</b> ALL RIGHT RESERVED.</div>
-                    </address>
-                </footer>
+                  </div>
+                </li>
+                <li class="MenuList">
+                  <a href="#"><span>SHOPALL</span></a>
+                  <div class="ShopList">
+                    <ul>
+                      <li><a href="#">BEST</a></li>
+                      <li><a href="#">ONLYAMUSE</a></li>
+                      <li><a href="#">FACE</a></li>
+                      <li><a href="#">SUNCARE</a></li>
+                      <li><a href="#">LIP</a></li>
+                      <li><a href="#">EYES</a></li>
+                      <li><a href="#">WELLNESS</a></li>
+                      <li><a href="#">AgoodMUSE</a></li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="MenuList">
+                  <a href="./page/about.html" class="bold"><span class="sub">ABOUT</span></a>
+                  <div class="ShopList hide">
+                    <ul>
+                      <li><a href="./page/about.html" class="bold">ABOUT US</a></li>
+                      <li><a href="#">ABOUT GIRL</a></li>
+                      <li><a href="#">MEMBERSHIP</a></li>
+                      <li><a href="#">LOOKBOOK</a></li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="MenuList"><a href="#">WELLNESS</a></li>
+                <li class="MenuList"><a href="#">SHOWROOM</a></li>
+                <li class="MenuList">
+                  <a href="#"><span class="sub">STOCKIST</span></a>
+                  <div class="ShopList hide">
+                    <ul>
+                      <li><a href="#">OFFLINE STORE</a></li>
+                      <li><a href="#">ONLINE STORE</a></li>
+                      <li><a href="#">GLOBAL STORE</a></li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="MenuList">
+                  <a href="#"><span class="sub">COMMUNITY</span></a>
+                  <div class="ShopList hide">
+                    <ul>
+                      <li><a href="#">EVENT</a></li>
+                      <li><a href="#">REVIEW</a></li>
+                      <li><a href="#">NOTICE</a></li>
+                      <li><a href="#">FAQ</a></li>
+                    </ul>
+                  </div>
+                </li>
+              </ul>
             </div>
+          </div>
+        </div>
+      </header>
+
+      <div class="main">
+        <!-- layer popup content -->
+        <div class="popup" id="popup">
+          <div class="layer" id="layer">
+            <h2>메뉴를 클릭해주세요</h2>
+            <div class="txt">메뉴안에 있는 about us <em>클릭</em>해주세요</div>
+          </div>
         </div>
 
-        <script>
-            const mySwiper = new Swiper('.swiper1', {
-                direction: 'horizontal',
-                loop: true,
-                // autoplay: {
-                //   delay: 1600,
-                // },
-                slidesPerView: 1,
-                spaceBetween: 30,
-            });
+        <section class="section1" id="section1">
+          <div class="MainSlide">
+            <div class="slide" id="slide">
+              <div class="banner swiper-container swiper1">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <div class="ColorBox1">
+                      <div class="ImgBox1"></div>
+                      <div class="SlideTxt1">
+                        <div class="SlideTxt">
+                          <p><span>DEW POWER</span>CUSHION</p>
+                          <p>
+                            맑은 윤결광 피부
+                            <br />
+                            NEW 듀 파워 비건 쿠션 런칭
+                          </p>
+                          <a href="#">SHOP NOW</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="ColorBox2">
+                      <div class="ImgBox2"></div>
+                      <div class="SlideTxt2">
+                        <div class="SlideTxt">
+                          <p><span>NEW DEW</span>TINT</p>
+                          <p>
+                            맑은 윤결광 피부
+                            <br />
+                            NEW 듀 파워 비건 쿠션 런칭
+                          </p>
+                          <a href="#">SHOP NOW</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="ColorBox3">
+                      <div class="ImgBox3"></div>
+                      <div class="SlideTxt3">
+                        <div class="SlideTxt">
+                          <p>BUNNY TONGUE EDITION</p>
+                          <p>
+                            매끈 도자기 피부
+                            <br />
+                            NEW 듀 파워 비건 쿠션 런칭
+                          </p>
+                          <a href="#">SHOP NOW</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="ColorBox4">
+                      <div class="ImgBox4"></div>
+                      <div class="SlideTxt4">
+                        <div class="SlideTxt">
+                          <p><span>DEW CERAMIC</span>CUSHION</p>
+                          <p>
+                            맑은 윤결광 피부
+                            <br />
+                            NEW 듀 세라믹 스킨 쿠션 런칭
+                          </p>
+                          <a href="#" class="black">SHOP NOW</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
 
-            const mySwiper2 = new Swiper('.swiper2', {
-                direction: 'horizontal',
-                loop: true,
-                slidesPerView: 4,
-                breakpoints: {
-                    320: {
-                        slidesPerView: 2,
-                        spaceBetween: 10,
-                    },
-                    768: {
-                        slidesPerView: 4,
-                        spaceBetween: 10,
-                    },
-                },
-            });
+        <section class="section2" id="section2">
+          <div class="TxtBlock">
+            <div class="track">
+              <div class="BlockTxt">
+                &nbsp;INSPIRED BY SEOULER&nbsp; INSPIRED BY SEOULER&nbsp;INSPIRED BY SEOULER&nbsp;INSPIRED BY
+                SEOULER&nbsp;INSPIRED BY SEOULER&nbsp;INSPIRED BY SEOULER&nbsp;INSPIRED BY SEOULER&nbsp;INSPIRED BY
+                SEOULER&nbsp;INSPIRED BY SEOULER&nbsp;
+              </div>
+            </div>
+          </div>
+        </section>
 
-            const mySwiper3 = new Swiper('.swiper3', {
-                direction: 'horizontal',
-                loop: false,
-                slidesPerView: 1,
-            });
+        <section class="section3" id="section3">
+          <div class="layout">
+            <div class="NewIn">
+              <h1>NEW</h1>
+              <div class="swiper-container swiper2 NewBox">
+                <ul class="swiper-wrapper ItmSlide">
+                  <li class="swiper-slide ItmList">
+                    <div class="NewBox">
+                      <div class="NewThumb">
+                        <a href="#"><img src="./img/main/new6.jpg" alt="신제품" /></a>
+                      </div>
+                      <div class="NewTxt">
+                        <span>상품명</span>
+                        <span>버니 텅 립 앤 치크 키트 + 립 브러쉬</span>
+                        <span>가격</span> <span>00,000</span>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="swiper-slide ItmList">
+                    <div class="NewBox">
+                      <div class="NewThumb">
+                        <a href="#"><img src="./img/main/new3.jpg" alt="신제품" /></a>
+                      </div>
+                      <div class="NewTxt">
+                        <span>상품명</span> <span>듀 틴트 듀오 세트</span> <span>가격</span>
+                        <span>00,000</span>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="swiper-slide ItmList">
+                    <div class="NewBox">
+                      <div class="NewThumb">
+                        <a href="#"><img src="./img/main/new1.jpg" alt="신제품" /></a>
+                      </div>
+                      <div class="NewTxt">
+                        <span>상품명</span> <span>듀 틴트 듀오 세트</span> <span>가격</span>
+                        <span>00,000</span>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="swiper-slide ItmList">
+                    <div class="NewBox">
+                      <div class="NewThumb">
+                        <a href="#"><img src="./img/main/new2.jpg" alt="신제품" /></a>
+                      </div>
+                      <div class="NewTxt">
+                        <span>상품명</span>
+                        <span>듀 파워 비건 쿠션 세트(본품+리필2ea)</span>
+                        <span>가격</span> <span>00,000</span>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="swiper-slide ItmList">
+                    <div class="NewBox">
+                      <div class="NewThumb">
+                        <a href="#"><img src="./img/main/new5.jpg" alt="신제품" /></a>
+                      </div>
+                      <div class="NewTxt">
+                        <span>상품명</span> <span>말랑 젤리 립 브러쉬</span> <span>가격</span>
+                        <span>00,000</span>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="swiper-slide ItmList">
+                    <div class="NewBox">
+                      <div class="NewThumb">
+                        <a href="#"><img src="./img/main/new4.jpg" alt="신제품" /></a>
+                      </div>
+                      <div class="NewTxt">
+                        <span>상품명</span>
+                        <span>비건 쿠션 리필 2ea 세트</span> <span>가격</span>
+                        <span>00,000</span>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
 
-            document.querySelectorAll('.BestList').forEach((link) => {
-                link.addEventListener('click', (e) => {
-                    e.preventDefault();
+        <section class="section4" id="section4">
+          <div class="product">
+            <div class="swiper-container swiper3 LeftSlid">
+              <ul class="swiper-wrapper SlideImg">
+                <li class="swiper-slide ImgList">
+                  <img src="./img/main/sl_left1.jpeg" alt="상품배너이미지" />
+                </li>
+                <li class="swiper-slide ImgList">
+                  <img src="./img/main/sl_left2.jpeg" alt="상품배너이미지" />
+                </li>
+                <li class="swiper-slide ImgList">
+                  <img src="./img/main/sl_left3.jpeg" alt="상품배너이미지" />
+                </li>
+                <li class="swiper-slide ImgList">
+                  <img src="./img/main/sl_left4.jpeg" alt="상품배너이미지" />
+                </li>
+                <li class="swiper-slide ImgList">
+                  <img src="./img/main/sl_left5.jpeg" alt="상품배너이미지" />
+                </li>
+                <li class="swiper-slide ImgList">
+                  <img src="./img/main/sl_left6.jpeg" alt="상품배너이미지" />
+                </li>
+              </ul>
+            </div>
 
-                    const slideIndex = e.currentTarget.getAttribute('data-swiper-slide-index');
+            <div class="ItmContents">
+              <article class="ConTitle">
+                <p>best</p>
+                <p>AMUSE PICK!</p>
+              </article>
+              <ul class="BestItm">
+                <li class="BestList" data-swiper-slide-index="0">
+                  <div class="BestImg">
+                    <img src="./img/main/sl_right3.png" alt="상품이미지" />
+                  </div>
+                  <div class="BestTxt">
+                    <p>비건 쿠션 리필 2ea 세트</p>
+                    <p>FACE</p>
+                  </div>
+                  <div class="BestLink"><p>SHOP</p></div>
+                </li>
+                <li class="BestList" data-swiper-slide-index="1">
+                  <div class="BestImg">
+                    <img src="./img/main/sl_right4.png" alt="상품이미지" />
+                  </div>
+                  <div class="BestTxt">
+                    <p>듀 웨어 파운데이션</p>
+                    <p>FACE</p>
+                  </div>
+                  <div class="BestLink"><p>SHOP</p></div>
+                </li>
+                <li class="BestList" data-swiper-slide-index="2">
+                  <div class="BestImg">
+                    <img src="./img/main/sl_right1.png" alt="상품이미지" />
+                  </div>
+                  <div class="BestTxt">
+                    <p>젤핏 틴트</p>
+                    <p>LIP</p>
+                  </div>
+                  <div class="BestLink"><p>SHOP</p></div>
+                </li>
+                <li class="BestList" data-swiper-slide-index="3">
+                  <div class="BestImg">
+                    <img src="./img/main/sl_right5.png" alt="상품이미지" />
+                  </div>
+                  <div class="BestTxt">
+                    <p>마이 어뮤즈 미러</p>
+                    <p>GIFT</p>
+                  </div>
+                  <div class="BestLink"><p>SHOP</p></div>
+                </li>
+                <li class="BestList" data-swiper-slide-index="4">
+                  <div class="BestImg">
+                    <img src="./img/main/sl_right6.png" alt="상품이미지" />
+                  </div>
+                  <div class="BestTxt">
+                    <p>듀 틴트</p>
+                    <p>LIP</p>
+                  </div>
+                  <div class="BestLink"><p>SHOP</p></div>
+                </li>
+                <li class="BestList" data-swiper-slide-index="5">
+                  <div class="BestImg">
+                    <img src="./img/main/sl_right2.png" alt="상품이미지" />
+                  </div>
+                  <div class="BestTxt">
+                    <p>아이 컬러 팔레트</p>
+                    <p>EYES</p>
+                  </div>
+                  <div class="BestLink"><p>SHOP</p></div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
 
-                    mySwiper3.slideTo(slideIndex);
-                });
-            });
-        </script>
-    </body>
+        <section class="section5" id="section5">
+          <div class="product">
+            <div class="VeganLeft">
+              <img src="./img/main/ve5.gif" alt="비건왼쪽이미지" />
+            </div>
+            <div class="VeganBox">
+              <div class="VeganTit">
+                <h2>I'M VEGAN</h2>
+                <div class="VeTxt">
+                  <p>AMUSE 는 환경과 지속 가능성을 생각하는</p>
+                  <p>이브 비건 (EVE VEGAN) 인증을 획득한</p>
+                  <p>비건 & 웰니스 뷰티 큐레이션을 선보입니다.</p>
+                </div>
+                <ul class="VeContents">
+                  <li class="VeList">
+                    <div class="VeImg">
+                      <img src="./img/main/ve2.png" alt="비건_AMRA&AZ" />
+                    </div>
+                    <article>
+                      <p>AMUSE <em>girl</em> AMARA</p>
+                      <p>AMARA는 AMUSE의 세계관을 이야기하는 K-VIRTUAL GIRL</p>
+                      <p>비건&웰니스를 사랑하는 영 비거니스트</p>
+                      <a href="#">SHOP NOW</a>
+                    </article>
+                  </li>
+                  <li class="VeList">
+                    <div class="VeImg">
+                      <img src="./img/main/ve1.jpeg" alt="비건_어뮤즈쇼름" />
+                    </div>
+                    <article>
+                      <p>AMUSE SHOWROOM</p>
+                      <p>AMUSE의 비건 무드 공간</p>
+                      <p>AMUSE 한남 쇼룸에서 새로운 비건 뷰티 라이프를 시작해보세요.</p>
+                      <a href="#">SHOP NOW</a>
+                    </article>
+                  </li>
+                  <li class="VeList">
+                    <div class="VeImg">
+                      <img src="./img/main/ve3.jpg" alt="비건상품" />
+                    </div>
+                    <article>
+                      <p>AMUSE WELLNESS</p>
+                      <p>GOOD VEGAN life, WELLNESS</p>
+                      <p>건강하고 균형잡힌 웰니스 라이프스타일 뷰티를 제공합니다.</p>
+                      <a href="#">SHOP NOW</a>
+                    </article>
+                  </li>
+                  <li class="VeList">
+                    <div class="VeImg">
+                      <img src="./img/main/ve4.png" alt="비건_어뮤즈웰니스책" />
+                    </div>
+                    <article>
+                      <p class="TxtP"><em>AMUSE x STICKHER</em> 웰니스북</p>
+                      <p>하루를 채우는 작은습관과 수칙 70가지</p>
+                      <p>웰니스 생활규칙과 실천노하우를 제시하는 책</p>
+                      <a href="#">SHOP NOW</a>
+                    </article>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="section5_mo" id="section5_mo">
+          <div class="MoInner swiper-container swiper1">
+            <ul class="inner1">
+              <li class="MoTit">I'M VEGAN</li>
+              <li class="MoImg">
+                <img src="./img/main/veicon.png" alt="어뮤즈비건로고" />
+              </li>
+              <li class="MoTxt">
+                <span>
+                  <b>AMUSE</b> 는 환경과 지속 가능성을 생각하는<br />이브 비건 (EVE VEGAN) 인증을 획득한<br />비건 &amp;
+                  웰니스 뷰티 큐레이션을 선보입니다.
+                </span>
+              </li>
+            </ul>
+            <ul class="inner2 swiper-wrapper">
+              <li class="swiper-slide">
+                <img src="./img/main/ve1_mo.png" alt="비건_AMRA&AZ" />
+                <a href="#"><span>SHOP NOW</span></a>
+              </li>
+              <li class="swiper-slide">
+                <img src="./img/main/ve2_mo.png" alt="비건_어뮤즈쇼름" />
+                <a href="#"><span>SHOP NOW</span></a>
+              </li>
+              <li class="swiper-slide">
+                <img src="./img/main/ve3_mo.png" alt="비건상품" />
+                <a href="#"><span>SHOP NOW</span></a>
+              </li>
+              <li class="swiper-slide">
+                <img src="./img/main/ve4_mo.png" alt="비건_어뮤즈웰니스책" />
+                <a href="#"><span>SHOP NOW</span></a>
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <section class="section6" id="section6">
+          <div class="layout">
+            <div class="InsTit"><h1>#WELLNESS FACE COOLER</h1></div>
+            <div class="InstagramBox">
+              <div class="InsGrid">
+                <div class="GridItm">
+                  <img src="./img/main/ins1.jpg" alt="어뮤즈인스타그램" />
+                </div>
+                <div class="GridItm">
+                  <img src="./img/main/ins2.jpg" alt="어뮤즈인스타그램" />
+                </div>
+                <div class="GridItm">
+                  <img src="./img/main/ins3.jpg" alt="어뮤즈인스타그램" />
+                </div>
+                <div class="GridItm">
+                  <img src="./img/main/ins4.jpg" alt="어뮤즈인스타그램" />
+                </div>
+                <div class="GridItm">
+                  <img src="./img/main/ins5.jpg" alt="어뮤즈인스타그램" />
+                </div>
+                <div class="GridItm">
+                  <img src="./img/main/ins6.jpg" alt="어뮤즈인스타그램" />
+                </div>
+                <div class="GridItm">
+                  <img src="./img/main/ins7.jpg" alt="어뮤즈인스타그램" />
+                </div>
+                <div class="GridItm">
+                  <img src="./img/main/ins8.jpg" alt="어뮤즈인스타그램" />
+                </div>
+                <div class="GridItm">
+                  <img src="./img/main/ins9.jpg" alt="어뮤즈인스타그램" />
+                </div>
+                <div class="GridItm">
+                  <img src="./img/main/ins10.jpg" alt="어뮤즈인스타그램" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <footer>
+          <div class="FooterInner">
+            <div class="FooterWrap">
+              <table border="0" summary="" cellspacing="0" cellpadding="0">
+                <colgroup>
+                  <col style="width: auto" />
+                  <col style="width: 32%" />
+                  <col style="width: 32%" />
+                </colgroup>
+                <tbody>
+                  <tr>
+                    <td scope="col" class="a">
+                      <div class="FooLogo">
+                        <a href="#"
+                          ><img
+                            src="https://amusemakeup.cafe24.com/web/upload/NNEditor/20201006/487150516b531dc46b1c07bab3ed80b8.png"
+                            alt="어뮤즈푸터로고"
+                        /></a>
+                      </div>
+                      <div class="FSns">
+                        <ul>
+                          <li class="SnsIns">
+                            <a href="https://www.instagram.com/amuse/" target="_blank"><i class="xi-instagram"></i></a>
+                          </li>
+                          <li class="SnsTic">
+                            <a href="https://www.tiktok.com/@amuse_official?lang=ko-KR" title="tiktok" target="_blank"
+                              ><img src="./img/main/icon_tiktok_b.png" alt="tiktok"
+                            /></a>
+                          </li>
+                          <li class="SnsTalk">
+                            <a href="https://pf.kakao.com/_ITBsj" title="kakaotalk" target="_blank"
+                              ><i class="xi-kakaotalk"></i
+                            ></a>
+                          </li>
+                          <li class="SnsTwt">
+                            <a href="https://twitter.com/amuse_kr" title="twitter" target="_blank"
+                              ><i class="xi-twitter"></i
+                            ></a>
+                          </li>
+                        </ul>
+
+                        <div class="copyright">
+                          <span> ©Kimdasol all right reserved. </span>
+                        </div>
+                        <div class="GuideLine">
+                          <ul>
+                            <li><a href="#">이용약관</a></li>
+                            <li><a href="#">개인정보처리방침</a></li>
+                            <li><a href="#">사업자정보확인</a></li>
+                          </ul>
+                        </div>
+                      </div>
+                    </td>
+                    <td cope="col" class="b">
+                      <div class="FInfo">
+                        <div class="FTit">CUSTOMER CENTER</div>
+                        <div class="FData">
+                          <p class="call">
+                            <span class="CallNum">1833-7689</span>
+                          </p>
+                          <p>
+                            <span class="open1">MON - FRI 9AM - 5PM</span>
+                          </p>
+                          <p>
+                            <span class="open2">LUNCH 12PM - 1PM</span>
+                          </p>
+                          <p>
+                            <span class="open3">SAT.SUN.HOLIDAY OFF</span>
+                          </p>
+                        </div>
+                      </div>
+                    </td>
+                    <td cope="col" class="c">
+                      <div class="FInfo">
+                        <ul>
+                          <li><a href="./page/about.html" class="bold">ABOUT</a></li>
+                          <li><a href="#">MYPAGE</a></li>
+                          <li><a href="#">STORE</a></li>
+                          <li><a href="#">Q&amp;A</a></li>
+                          <li>
+                            <a href="#">WHOLESALE / PARTNERSHIP<br /><span>help_amuse@amusemakeup.com</span></a>
+                          </li>
+                        </ul>
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <address>
+            <div class="FooLogo_mo">
+              <a href="#"
+                ><img
+                  src="https://amusemakeup.cafe24.com/web/upload/NNEditor/20201006/487150516b531dc46b1c07bab3ed80b8.png"
+                  alt="어뮤즈푸터로고"
+              /></a>
+            </div>
+            <div class="Foo_mo">
+              <dl>
+                <dt>CUSTOMER CENTER</dt>
+                <dd>
+                  <div class="CS">
+                    <div class="sec">
+                      <div class="inner">
+                        <h3>고객센터</h3>
+                        <p class="CsInfo">
+                          <span class="CsNum"> 1833-7689 </span>
+                        </p>
+
+                        <p>
+                          <span client="TimeInfo">MON - FRI 9AM - 5PM</span>
+                        </p>
+                        <p><span client="TimeInfo">LUNCH 12PM - 1PM</span></p>
+                        <p>
+                          <span client="TimeInfo">SAT.SUN.HOLIDAY OFF</span>
+                        </p>
+                      </div>
+                    </div>
+                    <div class="sec">
+                      <div class="inner">
+                        <h3>무통장 계좌안내</h3>
+                        <p class="account">
+                          <span class="AccountName">예금주 : 주식회사어뮤즈</span>
+                        </p>
+                        <p>
+                          <span class="AccountInfo1">신한은행</span>
+                          <span class="AccountInfo2">1000-3264-1103</span>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </dd>
+                <a href="./page/about.html" class="bold">ABOUT</a>
+                <a href="#">MYPAGE</a>
+                <a href="#">Q&amp;A</a>
+                <a href="#">STORE</a>
+                <a href="#">WHOLESALE / PARTNERSHIP<br /><span>help_amuse@amusemakeup.com</span></a>
+              </dl>
+            </div>
+            <div class="Link">
+              <ul>
+                <li><a href="#">이용약관</a></li>
+                <li><a href="#">개인정보처리방침</a></li>
+                <li><a href="#">사업자정보확인</a></li>
+              </ul>
+            </div>
+            <div class="info">
+              <dl>
+                <dt>주식회사 어뮤즈</dt>
+                <dd></dd>
+              </dl>
+              <dl>
+                <dt>대표이사</dt>
+                <dd>김창욱, 이승민</dd>
+              </dl>
+              <dl>
+                <dt>주소</dt>
+                <dd>경기도 성남시 분당구 분당내곡로 131 (백현동)<br />8층</dd>
+              </dl>
+              <dl class="num1">
+                <dt>대표전화/고객센터</dt>
+                <dd><a href="tel:1833-7689">1833-7689</a></dd>
+              </dl>
+              <dl class="num2">
+                <dt>사업자등록번호</dt>
+                <dd>392-87-00797</dd>
+              </dl>
+              <dl class="about">
+                <dt>통신판매업신고</dt>
+                <dd>2018-성남분당-0179</dd>
+              </dl>
+            </div>
+            <div class="sns">
+              <ul>
+                <li class="SnsIns">
+                  <a href="https://www.instagram.com/amuse/" target="_blank"><i class="xi-instagram"></i></a>
+                </li>
+                <li class="SnsTic">
+                  <a href="https://www.tiktok.com/@amuse_official?lang=ko-KR" title="tiktok" target="_blank"
+                    ><img src="./img/main/icon_tiktok_b.png" alt="tiktok"
+                  /></a>
+                </li>
+                <li class="SnsTalk">
+                  <a href="https://pf.kakao.com/_ITBsj" title="kakaotalk" target="_blank"
+                    ><i class="xi-kakaotalk"></i
+                  ></a>
+                </li>
+                <li class="SnsTwt">
+                  <a href="https://twitter.com/amuse_kr" title="twitter" target="_blank"><i class="xi-twitter"></i></a>
+                </li>
+              </ul>
+            </div>
+            <div class="copyright">Hosting by Cafe24</div>
+            <div class="copyright">COPYRIGHT © <b>AMUSE</b> ALL RIGHT RESERVED.</div>
+          </address>
+        </footer>
+      </div>
+    </div>
+
+    <script>
+      const mySwiper = new Swiper('.swiper1', {
+        direction: 'horizontal',
+        loop: true,
+        autoplay: {
+          delay: 1600,
+        },
+        slidesPerView: 1,
+        spaceBetween: 30,
+      });
+
+      const mySwiper2 = new Swiper('.swiper2', {
+        direction: 'horizontal',
+        loop: true,
+        slidesPerView: 4,
+        breakpoints: {
+          320: {
+            slidesPerView: 2,
+            spaceBetween: 10,
+          },
+          768: {
+            slidesPerView: 4,
+            spaceBetween: 10,
+          },
+        },
+      });
+
+      const mySwiper3 = new Swiper('.swiper3', {
+        direction: 'horizontal',
+        loop: false,
+        slidesPerView: 1,
+      });
+
+      document.querySelectorAll('.BestList').forEach((link) => {
+        link.addEventListener('click', (e) => {
+          e.preventDefault();
+
+          const slideIndex = e.currentTarget.getAttribute('data-swiper-slide-index');
+
+          mySwiper3.slideTo(slideIndex);
+        });
+      });
+    </script>
+  </body>
 </html>
