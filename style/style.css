@@ -260,6 +260,16 @@ header .HeaderTop {
   cursor: pointer;
 }
 
+#home {
+  right: 56px;
+  font-size: 25px;
+  top: 50%;
+  text-align: center;
+  margin-top: -15px;
+  z-index: 1;
+  cursor: pointer;
+}
+
 .Menubtn {
   font-size: 25px;
 

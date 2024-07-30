@@ -7,9 +7,11 @@
     <link rel="stylesheet" href="./../style/page/about.css" />
     <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css" />
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
     <!-- JS -->
     <script src="./../js/js.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
   </head>
 
   <body>
@@ -30,6 +32,10 @@
                     <li class="GnbList Menubtn" id="MenuBox">
                       <i class="xi-bars"></i>
                       <a href="#" class="GnbItm">menu</a>
+                    </li>
+
+                    <li class="GnbList" id="home">
+                      <i class="xi-home-o"></i><a href="https://da22sol.github.io/amuse/" class="GnbItm">홈</a>
                     </li>
                     <li class="GnbList" id="profile"><i class="xi-user-o"></i><a href="#" class="GnbItm">프로필</a></li>
                     <li class="GnbList" id="cart"><i class="xi-cart-o"></i><a href="#" class="GnbItm">장바구니</a></li>
@@ -122,7 +128,8 @@
         <div class="box box2" data-aos="zoom-in" data-aos-easing="linear" data-aos-duration="1000">
           <div class="inner">
             <div class="ImgBox">
-              <img src="./../img/about/about.jpg" alt="" />
+              <img src="./../img/about/about.jpg" alt="" class="pc_img" />
+              <img src="./../img/about/about_mo.png" alt="" class="mo_img" />
             </div>
 
             <div class="des1">
@@ -162,29 +169,23 @@
           </div>
         </div>
         <div class="box box4">
-          <div
-            class="inner"
-            data-aos="fade-up"
-            data-aos-easing="linear"
-            data-aos-duration=" 1600"
-            data-aos-offset="500"
-          >
+          <div class="inner" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1600" data-aos-offset="500">
             <h2>AMUSE</h2>
             <p>
               AMUSE 는 일상에 자연스럽게 녹아들어<em> 새롭게 발견하게 될 새로운 </em>
               <span> '나'를 찾아가는 그 기분 좋은 여정을 함께 합니다. </span>
             </p>
           </div>
-          <div class="ani">
-            <ul>
-              <li class="list1">
+          <div class="ani swiper-container">
+            <ul class="swiper-wrapper">
+              <li class="list1 swiper-slide">
                 <div class="inner">
                   <div class="TxtWrap" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1200">
                     <div class="txt">
                       <h2>Seoul Based Lifestyle</h2>
                     </div>
                     <div class="des2">
-                      <p>본연의 자연스러움이 담겨진 서울 베이스의 라이프스타일 DNA</p>
+                      <p>본연의 자연스러움이 담겨진 서울 베이스의 <span>라이프스타일 DNA</span></p>
                       <p>
                         <em>SEOULER'S LIFESTYLE BEAUTY</em> 우리가 매일 살아가는 공간인 서울, 그리고 자기 스스로의
                         아이코닉한 라이프 스타일과 컬처를 만들어가는, 서울러에게 영감을 받은 모티브로, 나만의 취향이
@@ -204,19 +205,20 @@
                   </div>
                 </div>
               </li>
-              <li class="list2">
+              <li class="list2 swiper-slide">
                 <div class="inner">
                   <div class="TxtWrap" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1200">
                     <div class="txt">
                       <h2>Clean & Vegan Beauty</h2>
                     </div>
                     <div class="des2">
-                      <p>환경과 지속 가능성을 생각하는 뷰티 루틴 완성, 클린& 비건 뷰티 DNA</p>
+                      <p>환경과 지속 가능성을 생각하는 뷰티 루틴 완성,<span> 클린& 비건 뷰티 DNA</span></p>
                       <p>
-                        어뮤즈 웰니스는 <em>매일의 일상은 건강하고, 동시에 즐거워야 한다</em> 는
+                        어뮤즈 웰니스는 <em>매일의 일상은 건강하고, 동시에 즐거워야 한다</em>는
                         <br />
-                        믿음과 자연에서 얻은 건강한 원료로 고기능&고효능을 실현하고, <br />
-                        감각을 즐겁게 깨우는 동시에, 건강하고 균형 잡힌 웰니스 라이프스타일 뷰티를 제안합니다
+                        믿음과 자연에서 얻은 건강한 원료로 고기능&고효능을 실현하고,
+                        <br />
+                        감각을 즐겁게 깨우는 동시에, 건강하고 균형 잡힌 웰니스 라이프스타일 뷰티를 제안합니다.
                       </p>
                     </div>
                   </div>
@@ -232,17 +234,18 @@
                   </div>
                 </div>
               </li>
-              <li class="list3">
+              <li class="list3 swiper-slide">
                 <div class="inner">
                   <div class="TxtWrap" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1200">
                     <div class="txt">
                       <h2>AMUSE's Color Code</h2>
                     </div>
                     <div class="des2">
-                      <p>고유한 정체성과 스토리를 담아낸 AMUSE 컬러 DNA</p>
+                      <p>고유한 정체성과 스토리를 담아낸 <span>AMUSE 컬러 DNA</span></p>
                       <p>
                         AMUSE 는 점차적으로 그 가치와 영역을 우리의 일상으로 확대하여
-                        <br />본질에 집중한 AMUSE 만의 기분 좋은 애티튜드를 담은 <br />
+                        <br />본질에 집중한 AMUSE 만의 기분 좋은 애티튜드를 담은
+                        <br />
                         <em>새로운 비건 &웰니스 뷰티 라이프</em>를 완성하고자 합니다.
                       </p>
                     </div>
@@ -259,7 +262,7 @@
                   </div>
                 </div>
               </li>
-              <li class="list4">
+              <li class="list4 swiper-slide">
                 <div class="inner">
                   <div class="TxtWrap" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1200">
                     <div class="txt">
@@ -267,12 +270,13 @@
                     </div>
                     <div class="des2">
                       <p>
-                        디지털을 통한 인게이지먼트를 강화하고 <br />패션, 아트, 라이프스타일에 맞는 차별화된 뉴 룩 DNA
+                        디지털을 통한 인게이지먼트를 강화하고 <br />패션, 아트, 라이프스타일에 맞는
+                        <span>차별화된 뉴 룩 DNA</span>
                       </p>
                       <p><em>AMARA & AZ</em></p>
                       <p>
-                        AMARA는 AMUSE의 세계관을 이야기하는 K-VIRTUAL AMUSE GIRLE, <br />복숭아 행성에서 태어나 세상과
-                        소통하는소녀와
+                        AMARA는 AMUSE의 세계관을 이야기하는 K-VIRTUAL AMUSE GIRLE,
+                        <br />복숭아 행성에서 태어나 세상과 소통하는소녀와
                       </p>
 
                       <p>AMUSE의 파란 고양이 친구, AZ:아즈를 소개합니다. AMUSE & AZ의 친구가 되어보세요</p>
@@ -291,20 +295,25 @@
                 </div>
               </li>
             </ul>
+            <div class="swiper-pagination"></div>
           </div>
-          <div class="box box5">
-            <div class="inner" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1000">
-              <div class="IntImg"><img src="./../img/about/seouler.jpg" alt="" /></div>
-              <div class="des3">
-                <h2>INSPIRED BY SEOULER</h2>
-                <p>
-                  <em> AMUSE</em> 는 일상에 자연스럽게 녹아들어<em> 새롭게 발견하게 될 새로운 </em>
-                  <span> '나'를 찾아가는 그 기분 좋은 여정을 함께 합니다. </span>
-                </p>
-              </div>
+        </div>
+
+        <div class="box box5">
+          <div class="inner">
+            <div class="IntImg" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1000">
+              <img src="./../img/about/seouler.jpg" alt="" />
+            </div>
+            <div class="des3" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1000">
+              <h2>INSPIRED BY SEOULER</h2>
+              <p>
+                <em> AMUSE</em> 는 일상에 자연스럽게 녹아들어<em> 새롭게 발견하게 될 새로운 </em>
+                <span> '나'를 찾아가는 그 기분 좋은 여정을 함께 합니다. </span>
+              </p>
             </div>
           </div>
         </div>
+
         <footer>
           <div class="FooterInner">
             <div class="FooterWrap">
@@ -507,6 +516,34 @@
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
       AOS.init();
+      document.addEventListener('DOMContentLoaded', () => {
+        let mySwiper = null;
+        const initSwiper = () => {
+          mySwiper = new Swiper('.swiper-container', {
+            direction: 'horizontal',
+            slidesPerView: 1,
+            loop: true,
+            autoplay: {
+              delay: 1000,
+            },
+            pagination: {
+              el: '.swiper-pagination',
+              clickable: true,
+            },
+          });
+        };
+        const width = () => {
+          if (window.innerWidth <= 540) {
+            if (!mySwiper) initSwiper();
+          } else if (mySwiper) {
+            mySwiper.destory(true, true);
+            mySwiper = null;
+          }
+        };
+
+        width();
+        window.addEventListener('resize', width);
+      });
     </script>
   </body>
 </html>
