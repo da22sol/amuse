@@ -1,1 +1,1 @@
-# amuse
+## AMUSE 클론코딩 ### 구현 포인트 - 슬라이더 클릭 연동 인터랙션 (베스트 상품 클릭 → 좌측 슬라이더 해당 이미지로 이동) - 레이어 팝업 + setTimeout 5초 자동 닫힘 - 사이드 메뉴 + 외부 클릭 감지 자동 닫힘 - CSS 무한 텍스트 흐르기 애니메이션 - 모바일/PC 분기 섹션 구성 (section5 / section5_mo) - CSS 파일 역할별 분리 (공통/메인/서브페이지) - about.html 서브페이지 구현 ### 사용 기술 HTML5 · CSS3 · JavaScript · Swiper.js ### 배포 https://da22sol.github.io/amuse
