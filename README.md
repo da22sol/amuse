@@ -7,6 +7,8 @@
 https://da22sol.github.io/amuse
 
 ---
+Notoion
+https://frosted-brook-b69.notion.site/72dd5648876e402b8e895573b571fd2a?pvs=74
 
 ## Preview
 
@@ -44,26 +46,10 @@ CSS `keyframes` 기반 무한 텍스트 흐르기 애니메이션 구현
 
 ### CSS Architecture
 역할별 CSS 파일 분리 관리
-
-- common.css
-- main.css
-- sub.css
+스타일 파일을 역할별로 분리하여 유지보수성과 확장성을 고려했습니다.
 
 ### Sub Page
 `about.html` 서브페이지 제작
 
 ---
 
-## Folder Structure
-
-```bash id="v4d8fi"
-amuse/
-├── index.html
-├── about.html
-├── css/
-│   ├── common.css
-│   ├── main.css
-│   └── sub.css
-├── js/
-├── images/
-└── fonts/
